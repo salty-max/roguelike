@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Biome" load_steps=2 format=3 uid="uid://b5ep4aud30li7"]
+
+[ext_resource type="Script" path="res://resources/biome.gd" id="1_2guyp"]
+
+[resource]
+script = ExtResource("1_2guyp")
+name = &"Dungeon"
+floor_atlases = Array[Vector2i]([Vector2i(4, 1), Vector2i(5, 1), Vector2i(6, 1)])
