@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://o13vtm8s6b8o"]
+
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_nfh3e"]
+[ext_resource type="Resource" uid="uid://b5ep4aud30li7" path="res://resources/biomes/dungeon.tres" id="2_kphlf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grjbq"]
+size = Vector2(12, 12)
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_nfh3e")
+biome = ExtResource("2_kphlf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_grjbq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

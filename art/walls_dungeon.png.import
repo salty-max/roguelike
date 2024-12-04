@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3wlt6wuxcrh5"
-path="res://.godot/imported/oryx_16bit_fantasy_world_trans.png-383d1f5bdfe8e683c5b6e04881c6df51.ctex"
+uid="uid://cdfcqaxrcp1n"
+path="res://.godot/imported/walls_dungeon.png-d003bb34f984ecf9da2afc703554a26c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/oryx_16bit_fantasy_world_trans.png"
-dest_files=["res://.godot/imported/oryx_16bit_fantasy_world_trans.png-383d1f5bdfe8e683c5b6e04881c6df51.ctex"]
+source_file="res://art/walls_dungeon.png"
+dest_files=["res://.godot/imported/walls_dungeon.png-d003bb34f984ecf9da2afc703554a26c.ctex"]
 
 [params]
 

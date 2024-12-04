@@ -1,8 +1,12 @@
 [gd_resource type="Resource" script_class="Biome" load_steps=2 format=3 uid="uid://b5ep4aud30li7"]
 
-[ext_resource type="Script" path="res://resources/biome.gd" id="1_2guyp"]
+[ext_resource type="Script" path="res://resources/biomes/biome.gd" id="1_b7gi5"]
 
 [resource]
-script = ExtResource("1_2guyp")
+script = ExtResource("1_b7gi5")
 name = &"Dungeon"
-floor_atlases = Array[Vector2i]([Vector2i(4, 1), Vector2i(5, 1), Vector2i(6, 1)])
+walls_atlas_source_id = 1
+world_atlas_source_id = 0
+floor_atlases = Array[Vector2i]([Vector2i(0, 4)])
+open_door_atlas = Vector2i(1, 6)
+closed_door_atlas = Vector2i(0, 6)

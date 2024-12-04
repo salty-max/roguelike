@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdfcqaxrcp1n"
-path="res://.godot/imported/dungeon.png-2ea880d31fb87686a409cd2bdc7c25d4.ctex"
+uid="uid://vqmxp2ehid2l"
+path="res://.godot/imported/world.png-36441fd095f776ca04b8896879f1c849.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dungeon.png"
-dest_files=["res://.godot/imported/dungeon.png-2ea880d31fb87686a409cd2bdc7c25d4.ctex"]
+source_file="res://art/world.png"
+dest_files=["res://.godot/imported/world.png-36441fd095f776ca04b8896879f1c849.ctex"]
 
 [params]
 

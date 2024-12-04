@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Door" load_steps=2 format=3 uid="uid://b800ay537hde2"]
+
+[ext_resource type="Script" path="res://resources/tiles/door.gd" id="1_pdpls"]
+
+[resource]
+script = ExtResource("1_pdpls")
+locked = true
+closed = true
+type = 2
+solid = true

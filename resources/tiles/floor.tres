@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Tile" load_steps=2 format=3 uid="uid://bmt1jaxhlqgrm"]
+
+[ext_resource type="Script" path="res://resources/tiles/tile.gd" id="1_eodoo"]
+
+[resource]
+script = ExtResource("1_eodoo")
+type = 0
+is_solid = false
