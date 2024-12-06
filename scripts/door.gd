@@ -19,7 +19,7 @@ var source: TileSetAtlasSource
 func _ready() -> void:
 	source = TILESET.get_source(biome.world_atlas_source_id)
 	collision_shape_2d.shape.set("size", TILESET.tile_size)
-	state = DoorState.OPEN
+	state = DoorState.CLOSED
 
 func _set_state(value: DoorState) -> void:
 	state = value

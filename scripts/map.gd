@@ -5,6 +5,7 @@ extends Node2D
 const DOOR_SCENE := preload("res://scenes/door.tscn")
 
 @export var generate: bool
+@export var entities: Node
 @export var biome: Biome
 @export var grid_size: Vector2i
 @export var room_count: int
@@ -13,21 +14,17 @@ const DOOR_SCENE := preload("res://scenes/door.tscn")
 
 @onready var floor_layer: TileMapLayer = $FloorLayer # Floor
 @onready var environment_layer: TileMapLayer = $EnvironmentLayer # Walls and objects
-@onready var doors: Node = $Doors
 
 var rooms: Array[Rect2i] = []
 var floor_cells: Array[Vector2i]
 var mst: Array = []
 
 
-func _ready() -> void:
-	generate_map()
-
-
 func _process(_delta: float) -> void:
-	if generate:
-		generate = false
-		generate_map()
+	#if generate:
+		#generate = false
+		#generate_map()
+	pass
 
 
 func generate_map() -> void:
@@ -49,13 +46,8 @@ func clear_map() -> void:
 	floor_layer.clear()
 	environment_layer.clear()
 
-	if not is_instance_valid(doors):
-		doors = Node.new()
-		doors.name = "Doors"
-		add_child(doors)
-
-	for door in doors.get_children():
-		doors.queue_free()
+	for entity: Door in entities.get_children():
+		entity.queue_free()
 
 
 ###############################################################
@@ -145,10 +137,6 @@ func place_walls() -> void:
 
 
 func place_doors() -> void:
-	if not is_instance_valid(doors):
-		push_error("Doors node is not valid!")
-		return
-
 	for room in rooms:
 		var room_edges = get_room_edges(room)
 		for edge in room_edges:
@@ -156,7 +144,7 @@ func place_doors() -> void:
 				var door := DOOR_SCENE.instantiate()
 				door.biome = biome
 				door.position = environment_layer.map_to_local(edge)
-				doors.add_child(door)
+				entities.add_child(door)
 
 
 ###############################################################
@@ -225,8 +213,8 @@ func is_wall_tile(pos: Vector2i) -> bool:
 
 
 func is_door(pos: Vector2i) -> bool:
-	for door in doors.get_children():
-		if door.position == Vector2(pos):
+	for entity in entities.get_children():
+		if entity is Door and entity.position == Vector2(pos):
 			return true
 	return false
 

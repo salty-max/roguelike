@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5einaqewy7i5"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_fpar4"]
+[ext_resource type="SpriteFrames" uid="uid://dhts7vr4pbe8j" path="res://resources/characters/warrior.tres" id="1_wysua"]
+[ext_resource type="Texture2D" uid="uid://vqmxp2ehid2l" path="res://art/world.png" id="3_d6oug"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et1ss"]
+atlas = ExtResource("3_d6oug")
+region = Rect2(108, 48, 12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8ilv"]
+size = Vector2(12, 12)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+motion_mode = 1
+script = ExtResource("1_fpar4")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_et1ss")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_wysua")
+autoplay = "default"
+frame_progress = 0.158385
+
+[node name="BoxCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i8ilv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
